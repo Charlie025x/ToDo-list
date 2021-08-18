@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="list-container">
+        <div class="list-header">
+            <h1>To do on sunday</h1>
+        </div>
+        <div class="list-body">
+            <ul>
+                <li>
+                    <span class="check"><i class="fas fa-check"></i></span>
+                        wake up
+                    <span class="trash"><i class="fas fa-trash trash"></i></span>
+                </li>
+                <li>
+                    <span class="check"><i class="fas fa-check"></i></span>
+                        shower
+                    <span class="trash"><i class="fas fa-trash trash"></i></span>
+                </li>
+                <li>
+                    <span class="check"><i class="fas fa-check"></i></span>
+                        clean room
+                    <span class="trash"><i class="fas fa-trash trash"></i></span>
+                </li>
+            </ul>
+        </div>
+        <div class="delete-container">
+            <button class="btn-delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+        </div>
+    </div>
+
+    <template id="list-entry">
+        <li>
+            <span class="check"><i class="fas fa-check"></i></span>
+            <span class="trash"><i class="fas fa-trash trash"></i></span>
+        </li>
+    </template>
+    
+</body>
+</html>
