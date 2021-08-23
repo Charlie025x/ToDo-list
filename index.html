@@ -14,25 +14,16 @@
 <body>
     <div class="list-container">
         <div class="list-header">
-            <h1>To do on sunday</h1>
+            <h1>Todo List</h1>
         </div>
         <div class="list-body">
             <ul data-list-container>
+                <!-- Data comes from local storage-->
                 <!-- <li>
                     <span class="check"><i class="fas fa-check"></i></span>
                         wake up
                     <span class="trash"><i class="fas fa-trash trash"></i></span>
-                </li>
-                <li>
-                    <span class="check"><i class="fas fa-check"></i></span>
-                        shower
-                    <span class="trash"><i class="fas fa-trash trash"></i></span>
-                </li>
-                <li>
-                    <span class="check"><i class="fas fa-check"></i></span>
-                        clean room
-                    <span class="trash"><i class="fas fa-trash trash"></i></span>
-                </li> -->
+                </li>-->
             </ul>
         </div>
 
@@ -49,9 +40,12 @@
         </div>
     </div>
 
+    <!-- template goes unused-->
     <template id="list-entry">
         <li>
-            <span class="check"><i class="fas fa-check"></i></span>
+            <input type="checkbox" id="">
+            <!-- <span class="check"><i class="fas fa-check"></i></span> -->
+            <label class="check"><i class="fas fa-check"></i></label>
             list-entry sample text
             <span class="trash"><i class="fas fa-trash trash"></i></span>
         </li>

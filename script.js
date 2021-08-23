@@ -1,6 +1,7 @@
 const newListInput = document.querySelector('[data-new-list-input]')
 const addBtn = document.querySelector('[data-btn-add-list]')
 const listContainer = document.querySelector('[data-list-container]')
+const Li = document.getElementsByTagName("li")
 
 newListInput.onkeyup = () => {
     let userData = newListInput.value //getting user entered value
@@ -38,14 +39,37 @@ const showTasks = () => {
     listArr.forEach((element, index) => {
         newLiTag += `
         <li>
-            <span class="check"><i class="fas fa-check"></i></span>
+        <input type="checkbox" id="checkToggle">
+            <label for="checkToggle">
+                <span onclick="checkList(${index})" class="check"><i class="fas fa-check"></i></span>
+            </label>
             ${element}
-            <span class="trash"><i class="fas fa-trash trash"></i></span>
+            <span onclick="deleteList(${index})" class="trash"><i class="fas fa-trash trash"></i></span>
         </li>
         `
     });
     listContainer.innerHTML = newLiTag; // adding new li tag inside ul tag
     newListInput.value = ''; // clear input field when new list is created
 }
+
+// delete list function
+const deleteList = (index) => {
+    let getLocalStorage = localStorage.getItem("New Todo");
+    listArr = JSON.parse(getLocalStorage);
+    listArr.splice(index, 1); //delete or remove the particular indexed li
+    // after remove the li again update the local storage
+    localStorage.setItem("New Todo", JSON.stringify(listArr)); // transforming js object into a json string
+    showTasks(); // calling showTasks function
+}
+
+// check list function
+// const checkList = (index) => {
+//     let getLocalStorage = localStorage.getItem("New Todo");
+//     listArr = JSON.parse(getLocalStorage);
+//     // listArr.classList.togle("checked")
+//     Li[(index)].classList.togle("checked");
+//     showTasks(); // calling showTasks function
+// }
+
 
 showTasks();

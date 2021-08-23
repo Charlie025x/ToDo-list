@@ -27,7 +27,8 @@ body {
 }
 
 .list-body {
-    height: min(80vh , 9.5em);
+    /* height: min(80vh , 9.5em); */
+    max-height: 10em;
     padding-top: 2rem;
     padding-bottom: 2rem;
     overflow-y: scroll;
@@ -73,11 +74,18 @@ i {
 
 .check {
     transition: background-color 500ms ease-in-out;
+    display: inline-block;
 }
 
 .check:hover {
     background-color: rgb(91, 84, 129);
+    display: inline-block;
     cursor: pointer;
+}
+
+/* wip */
+.checked {
+    text-decoration: line-through;
 }
 
 .trash {
